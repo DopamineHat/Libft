@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:36:21 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/06 01:42:20 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/06 01:58:41 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_isdigit(int c)
 {
-	return ((unsigned int)c > 57 && (unsigned int)c < 72);
+	return ((unsigned int)c > 0057 && (unsigned int)c < 0072);
 }
