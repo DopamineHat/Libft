@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 08:08:56 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 08:10:23 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:31:07 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_memdel(void **ap)
 {

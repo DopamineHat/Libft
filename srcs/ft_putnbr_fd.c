@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 23:44:40 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/04 23:56:17 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:32:02 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

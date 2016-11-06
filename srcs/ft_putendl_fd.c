@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 23:41:09 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/04 23:56:00 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:31:44 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {

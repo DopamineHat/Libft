@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:57:52 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 07:59:42 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:32:41 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {

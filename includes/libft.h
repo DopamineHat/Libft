@@ -6,12 +6,12 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 23:10:59 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 01:50:33 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:39:36 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_H
-# define FT_LIBFT_H
+#ifndef _LIBFT_H
+# define _LIBFT_H
 
 # include <unistd.h>
 # include <fcntl.h>
@@ -41,5 +41,11 @@ char	*ft_strnew(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strdup(char const *s);
 int		ft_strlen(char const *s);
+int		ft_strcmp(char const *s1, char const *s2);
+int		ft_strncmp(char const *s1, char const *s2, size_t n);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
 
 #endif

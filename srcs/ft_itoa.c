@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:35:25 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 23:31:18 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:30:52 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 static int		ft_count_size(int nb)
 {

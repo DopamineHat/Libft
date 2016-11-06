@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 06:56:57 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 07:09:11 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:33:22 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

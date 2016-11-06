@@ -6,11 +6,11 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 02:09:53 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/06 03:09:55 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/06 04:32:34 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

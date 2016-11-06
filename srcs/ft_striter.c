@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:52:14 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 07:56:03 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:33:05 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f) (char *))
 {

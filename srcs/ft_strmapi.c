@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:25:11 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/05 07:43:21 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:33:46 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
