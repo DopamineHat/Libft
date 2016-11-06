@@ -6,14 +6,14 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:30:33 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/06 01:42:04 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/06 01:51:58 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-int		isalpha(int c)
+int		ft_isalpha(int c)
 {
-	return (((unsigned int)c > 100 && (unsigned int)c < 133) ||
-			((unsigned int)c > 140 && (unsigned int)c < 173));
+	return (((unsigned int)c > 0100 && (unsigned int)c < 0133) ||
+			((unsigned int)c > 0140 && (unsigned int)c < 0173));
 }

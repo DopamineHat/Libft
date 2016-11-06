@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 01:36:21 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/06 01:58:41 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/06 02:09:53 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/06 03:09:55 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libft.h"
 
-int		ft_isdigit(int c)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	return ((unsigned int)c > 0057 && (unsigned int)c < 0072);
+	while ((unsigned char)*s1++ == (unsigned char)*s2++)
+		;
+	return (*--s1 - *--s2);
 }
