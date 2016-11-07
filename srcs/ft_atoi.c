@@ -6,11 +6,13 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:51:33 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 02:18:50 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/07 02:23:14 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+#include "libft.h"
+
+int		ft_atoi(char const *str)
 {
 	int i;
 	int s;
