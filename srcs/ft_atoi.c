@@ -3,43 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 01:43:09 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/07 01:54:42 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/06 01:51:33 by adeletan          #+#    #+#             */
+/*   Updated: 2016/11/07 02:06:37 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(char const *str)
 {
-	int i;
-	int s;
-	int x;
+	int nb;
+	int index;
 
-	i = 0;
-	s = 1;
-	x = 0;
-	if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
-            || str[i] == '\n' || str[i] == '\r' || str[i] == '+')
-		++i;
-	if (str[i] == '-')
+	nb = 0;
+	index = 0;
+	if (strcmp(str, "-2147483648") == 0)
+		return (-2147483648);
+	if ((str[index] == '-' || str[index] == '+') ||
+		(str[index] >= '0' && str[index] <= '9'))
 	{
-		s = -1;
-		++i;
+		if (str[index] == '-'
+			&& str[index + 1] >= '0' && str[index + 1] <= '9')
+		{
+			++index;
+		}
+		else if (str[index] == '+' &&
+				str[index + 1] >= '0' && str[index + 1] <= '9')
+			++index;
+		while (str[index] >= '0' && str[index] <= '9')
+			nb = (nb * 10) + str[index++] - '0';
 	}
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		x *= 10;
-		x += (str[i] - '0');
-		++i;
-	}
-	return (x * s);
-}
-
-int main()
-{
-	printf("%d", ft_atoi("987654321"));
-	return (0);
+	if (str[0] == '-')
+		nb = -nb;
+	return (nb);
 }
