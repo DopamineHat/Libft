@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 01:51:33 by adeletan          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2016/11/07 02:23:14 by adeletan         ###   ########.fr       */
-=======
-/*   Updated: 2016/11/07 02:26:38 by rpagot           ###   ########.fr       */
->>>>>>> 49fd4ed92aef20b979447581212dd9cc4f4396a8
+/*   Created: 2016/11/07 02:29:32 by adeletan          #+#    #+#             */
+/*   Updated: 2016/11/07 02:32:34 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +22,15 @@ int		ft_atoi(char const *str)
 	s = 1;
 	x = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
-		|| str[i] == '\n' || str[i] == '\r' || str[i] == '+')
+		|| str[i] == '\n' || str[i] == '\r')
 		++i;
-	while (str[i] == '-')
+	if (str[i] == '-' && str[i + 1] >= '0' && str[i + 1] <= '9')
 	{
 		s = -1;
 		++i;
 	}
+	if (str[i] == '+' && str[i + 1] >= '0' && str[i + 1] <= '9')
+		++i;
 	while (str[i] <= '9' && str[i] >= '0')
 	{
 		x *= 10;
