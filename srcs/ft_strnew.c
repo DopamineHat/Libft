@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 08:00:07 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 04:34:19 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/07 00:42:26 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char	*ft_strnew(size_t size)
 	if (!(array = (char*)malloc(size + 1 * sizeof(char))))
 		return (NULL);
 	array[size + 1] = '\0';
-	while (index < size)
+	while (index <= size)
 	{
 		array[index] = '\0';
-		--index;
+		++index;
 	}
 	return (array);
 }

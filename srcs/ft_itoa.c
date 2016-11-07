@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:35:25 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 04:30:52 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/07 00:14:40 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char			*ft_itoa(int n)
 	index = ft_count_size(n);
 	if ((array = (char*)malloc((index + 1) * sizeof(char))) == NULL)
 		return (NULL);
-	array[index] = '\0';
+	array[index + 1] = '\0';
 	if (n < 0)
 	{
 		n = -n;

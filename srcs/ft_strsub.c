@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:09:47 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 04:34:45 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/07 00:31:33 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	while (len > 0)
 	{
 		array[index++] = s[start++];
-		len--;
+		--len;
 	}
+	array[index] = '\0';
 	return (array);
 }

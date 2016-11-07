@@ -5,66 +5,68 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 01:07:39 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 05:03:40 by adeletan         ###   ########.fr       */
+/*   Created: 2016/11/06 05:25:28 by adeletan          #+#    #+#             */
+/*   Updated: 2016/11/06 05:26:02 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_count_words(char const *s, char c)
+static int		ft_cnt_parts(const char *s, char c)
 {
-	int index;
-	int total;
+	int		cnt;
+	int		in_substring;
 
-	index = 0;
-	total = 0;
-	while (s[index])
+	in_substring = 0;
+	cnt = 0;
+	while (*s != '\0')
 	{
-		if (total == 0 && (s[index] != c && s[index] != '\0'))
-			++total;
-		if (s[index] == c && (s[index + 1] != c && s[index + 1] != '\0'))
-			++total;
-		++index;
+		if (in_substring == 1 && *s == c)
+			in_substring = 0;
+		if (in_substring == 0 && *s != c)
+		{
+			in_substring = 1;
+			cnt++;
+		}
+		s++;
 	}
-	return (total);
+	return (cnt);
 }
 
-static void		ft_trouver_mots(char const *s, int *index, int *index2, char c)
+static int		ft_wlen(const char *s, char c)
 {
-	while (s[*index] == c)
-		++*index;
-	*index2 = *index;
-	while (s[*index2 + 1] != c && s[*index2 + 1] != '\0')
-		++*index2;
+	int		len;
+
+	len = 0;
+	while (*s != c && *s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
+	char	**t;
+	int		nb_word;
 	int		index;
-	int		index2;
-	int		index3;
-	int		index4;
-	char	**array;
 
 	index = 0;
-	index2 = 0;
-	index3 = 0;
-	index4 = 0;
-	if ((array = (char**)malloc(ft_count_words(s, c) + 1 * sizeof(char*))) == NULL)
+	nb_word = ft_cnt_parts((const char *)s, c);
+	t = (char **)malloc(sizeof(*t) * (ft_cnt_parts((const char *)s, c) + 1));
+	if (t == NULL)
 		return (NULL);
-	while (array[index3])
+	while (nb_word--)
 	{
-		ft_trouver_mots(s, &index, &index2, c);
-		if (!(array[index3] = (char*)malloc((index2 - index) + 1 * sizeof(char))))
+		while (*s == c && *s != '\0')
+			s++;
+		t[index] = ft_strsub((const char *)s, 0, ft_wlen((const char *)s, c));
+		if (t[index] == NULL)
 			return (NULL);
-		while (index < index2)
-		{
-			array[index3][index4++] = s[index++];
-		}
-		array[index3][index4] = '\0';
-		index3++;
-		index4 = 0;
+		s = s + ft_wlen(s, c);
+		index++;
 	}
-	return (array);
+	t[index] = NULL;
+	return (t);
 }
