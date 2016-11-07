@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 01:07:39 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 00:05:52 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:34:27 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 static int		ft_count_words(char const *s, char c)
 {

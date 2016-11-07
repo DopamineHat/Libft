@@ -6,11 +6,11 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 22:55:53 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 00:02:11 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 04:32:11 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libft.h"
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
