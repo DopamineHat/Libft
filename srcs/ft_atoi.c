@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:51:33 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 02:08:48 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/07 02:13:48 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_atoi(char const *str)
 {
-	int nb;
+	cacaint nb;
 	int index;
 
 	nb = 0;
