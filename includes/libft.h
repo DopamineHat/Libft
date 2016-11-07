@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 23:10:59 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 01:35:01 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/07 07:43:51 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,13 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+char	*ft_strstr(char const *big, char const *little);
+char	*ft_strnstr(char const *big, char const *little, size_t len);
+char	*ft_strcpy(char *dst, char const *src);
+char	*ft_strncpy(char *dst, char const *src, size_t len);
+char	*ft_strcat(char *s1, char const *s2);
+char	*ft_strncat(char *s1, char const *s2, size_t n);
 
 #endif

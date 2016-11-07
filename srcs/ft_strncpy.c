@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 04:02:34 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/07 04:26:04 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/07 07:01:35 by adeletan          #+#    #+#             */
+/*   Updated: 2016/11/07 07:39:51 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,20 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	while (*src && --len >= 0)
-		*dst++ = *src++;
-	*dst = *src;
+	size_t index;
+	size_t limit;
+
+	index = 0;
+	if (!(dst) || !(src))
+		return (NULL);
+	limit = ft_strlen((char*)src);
+	while (index < len)
+	{
+		if (index > limit)
+			dst[index] = '\0';
+		else
+			dst[index] = src[index];
+		index++;
+	}
 	return (dst);
 }
