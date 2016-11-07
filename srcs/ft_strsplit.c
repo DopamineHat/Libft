@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 01:07:39 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 04:34:27 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/06 05:03:40 by adeletan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,19 @@ char			**ft_strsplit(char const *s, char c)
 	index2 = 0;
 	index3 = 0;
 	index4 = 0;
-	if ((array = (char**)malloc(ft_count_words(s, c) * sizeof(char*))) == NULL)
+	if ((array = (char**)malloc(ft_count_words(s, c) + 1 * sizeof(char*))) == NULL)
 		return (NULL);
 	while (array[index3])
 	{
 		ft_trouver_mots(s, &index, &index2, c);
-		if (!(array[index3] = (char*)malloc((index2 - index) * sizeof(char))))
+		if (!(array[index3] = (char*)malloc((index2 - index) + 1 * sizeof(char))))
 			return (NULL);
-		while (index <= index2)
+		while (index < index2)
 		{
 			array[index3][index4++] = s[index++];
 		}
-		array[index3++][index4] = '\0';
+		array[index3][index4] = '\0';
+		index3++;
 		index4 = 0;
 	}
 	return (array);
