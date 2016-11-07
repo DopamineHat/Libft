@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:51:33 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 02:18:50 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/07 02:26:38 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int ft_atoi(char *str)
 	i = 0;
 	s = 1;
 	x = 0;
-	if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
 		|| str[i] == '\n' || str[i] == '\r' || str[i] == '+')
 		++i;
-	if (str[i] == '-')
+	while (str[i] == '-')
 	{
 		s = -1;
 		++i;
