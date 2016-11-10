@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 08:25:02 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/07 09:24:57 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/07 09:35:27 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t n)
 
 	index = 0;
 	index2 = 0;
+	limit = ft_strlen(src);
 	while (*src++)
 		++limit;
 	if (*src != '\0')
