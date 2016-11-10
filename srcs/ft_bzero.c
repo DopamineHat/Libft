@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:04:13 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/10 09:16:19 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/10 09:31:30 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t index;
 
-	i = 0;
-	while (n > i)
+	index = 0;
+	while (n > index)
 	{
-		((char *)s)[i] = 0;
-		++i;
+		((char *)s)[index] = 0;
+		++index;
 	}
 }
