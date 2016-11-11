@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 07:01:35 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 07:39:51 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/11 19:48:28 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	size_t index;
+	size_t i;
 	size_t limit;
 
-	index = 0;
-	if (!(dst) || !(src))
-		return (NULL);
+	i = 0;
 	limit = ft_strlen((char*)src);
-	while (index < len)
+	while (i < len)
 	{
-		if (index > limit)
-			dst[index] = '\0';
+		if (i > limit)
+			dst[i] = '\0';
 		else
-			dst[index] = src[index];
-		index++;
+			dst[i] = src[i];
+		i++;
 	}
 	return (dst);
 }
