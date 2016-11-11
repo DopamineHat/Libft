@@ -1,48 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstrim.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 06:33:10 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/11 09:03:24 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/11 17:52:41 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/11 18:53:45 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_space(char const *s, int *index2, int *index3)
+static int	ft_count_space(char const *s, int *i2, int *i3)
 {
-	int index;
+	int i;
 
-	index = 0;
-	while (s[index])
-		++index;
-	--index;
-	while (s[index] == ' ' || s[index] == '\n' || s[index] == '\t')
-		--index;
-	*index3 = index;
-	index = 0;
-	while (s[index] == '\n' || s[index] == ' ' || s[index] == '\t')
-		++index;
-	*index2 = index;
-	return (*index3 - *index2);
+	i = 0;
+	while (s[i])
+		++i;
+	if (i != 0)
+		--i;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		--i;
+	if (i == -1)
+	{
+		*i2 = 1;
+		*i3 = 0;
+		return (0);
+	}
+	*i3 = i;
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		++i;
+	*i2 = i;
+	return (*i3 - *i2 + 1);
 }
 
 char		*ft_strtrim(char const *s)
 {
 	char	*array;
-	int		index;
-	int		index2;
-	int		index3;
+	int		i2;
+	int		i3;
+	int		i4;
 
-	index3 = ft_count_space(s, &index, &index2);
-	if (!(array = (char*)malloc(index3 + 1 * sizeof(char))))
+	i4 = ft_count_space(s, &i2, &i3);
+	if (!(array = (char*)malloc((i4 + 1) * sizeof(char))))
 		return (NULL);
-	index3 = 0;
-	while (index <= index2)
-		array[index3++] = s[index++];
-	array[index3] = '\0';
+	i4 = 0;
+	while (i2 <= i3)
+		array[i4++] = s[i2++];
+	array[i4] = '\0';
 	return (array);
 }
