@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 05:29:50 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/07 07:56:02 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/11 20:08:13 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 char	*ft_strncat(char *s1, char const *s2, size_t n)
 {
-	size_t index;
+	size_t i;
 	size_t limit;
-	size_t index2;
+	size_t i2;
 
-	index = 0;
-	index2 = 0;
+	i = 0;
+	i2 = 0;
 	limit = ft_strlen((char*)s2);
-	while (s1[index])
-		++index;
-	while (index2 < n)
+	while (s1[i])
+		++i;
+	while (i2 < n)
 	{
-		if (index2 < limit)
-			s1[index] = s2[index2];
+		if (i2 < limit)
+			s1[i] = s2[i2];
 		else
-			s1[index] = '\0';
-		++index2;
-		++index;
+			s1[i] = '\0';
+		++i2;
+		++i;
 	}
 	return (s1);
 }
