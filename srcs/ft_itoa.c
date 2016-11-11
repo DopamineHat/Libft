@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:35:25 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 00:14:40 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/11 13:39:52 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char			*ft_itoa(int n)
 {
 	char	*array;
 	int		index;
-	int		negative;
 
 	if (n == -2147483648)
 		return ("-2147483648");
@@ -45,15 +44,13 @@ char			*ft_itoa(int n)
 	if (n < 0)
 	{
 		n = -n;
-		negative = 1;
+		array[0] = '-';
 	}
-	while (index >= 0)
+	while (index >= 0 && array[index] != '-')
 	{
 		array[index] = (n % 10) + '0';
 		n = n / 10;
 		--index;
 	}
-	if (negative == 1)
-		array[0] = '-';
 	return (array);
 }
