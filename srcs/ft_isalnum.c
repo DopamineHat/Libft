@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:25:36 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/07 03:02:17 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/12 21:42:40 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_isalnum(int c)
 {
-	return (ft_isalpha((unsigned char)c) || ft_isdigit((unsigned char)c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
