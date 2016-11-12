@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 05:23:06 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/12 22:02:34 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/12 22:20:29 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/12 22:20:32 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,21 @@
 
 char	*ft_strnstr(char const *big, char const *little, size_t len)
 {
-	int		i;
-	int		i2;
-	size_t	trash;
+	size_t	i;
 
-	if (len > (unsigned long)ft_strlen(little))
-		trash = (unsigned long)ft_strlen(little);
-	i = 0;
-	i2 = -1;
-	if (!(little[i]))
+	if (*little == '\0')
 		return ((char*)big);
-	while (big[i] && (i + ft_strlen(little) <= (int)len))
+	i = 0;
+	while (*big && len)
 	{
-		if (big[i] == little[0])
-			if (!(ft_strcmp(ft_strsub(big, i, trash),
-						ft_strsub(little, 0, trash))) && i2 == -1)
-				i2 = i;
-		++i;
+		if (*big == little[i])
+			i++;
+		else
+			i = 0;
+		if (little[i] == '\0')
+			return ((char*)(big - i + 1));
+		big++;
+		len--;
 	}
-	if (i2 == -1)
-		return (NULL);
-	return ((char*)(&big[i2]));
+	return (NULL);
 }
