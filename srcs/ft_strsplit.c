@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 05:25:28 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 05:26:02 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/14 20:12:16 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,11 @@ char			**ft_strsplit(char const *s, char c)
 {
 	char	**t;
 	int		nb_word;
-	int		index;
+	int		i;
 
-	index = 0;
+	if (!(s))
+		return (NULL);
+	i = 0;
 	nb_word = ft_cnt_parts((const char *)s, c);
 	t = (char **)malloc(sizeof(*t) * (ft_cnt_parts((const char *)s, c) + 1));
 	if (t == NULL)
@@ -61,12 +63,12 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		while (*s == c && *s != '\0')
 			s++;
-		t[index] = ft_strsub((const char *)s, 0, ft_wlen((const char *)s, c));
-		if (t[index] == NULL)
+		t[i] = ft_strsub((const char *)s, 0, ft_wlen((const char *)s, c));
+		if (t[i] == NULL)
 			return (NULL);
 		s = s + ft_wlen(s, c);
-		index++;
+		i++;
 	}
-	t[index] = NULL;
+	t[i] = NULL;
 	return (t);
 }

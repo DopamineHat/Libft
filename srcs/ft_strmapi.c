@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:25:11 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/11 17:44:50 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/14 19:55:27 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
-	int		index;
+	int		i;
 	char	*array;
 
-	index = 0;
-	while (s[index])
-		++index;
-	if (!(array = (char*)malloc((index + 1) * sizeof(char))))
+	i = 0;
+	if (!(s) || !(f))
 		return (NULL);
-	array[index] = '\0';
-	index = 0;
-	while (s[index])
+	while (s[i])
+		++i;
+	if (!(array = (char*)malloc((i + 1) * sizeof(char))))
+		return (NULL);
+	array[i] = '\0';
+	i = 0;
+	while (s[i])
 	{
-		array[index] = f(index, s[index]);
-		++index;
+		array[i] = f(i, s[i]);
+		++i;
 	}
 	return (array);
 }

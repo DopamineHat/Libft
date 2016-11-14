@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 17:52:41 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/11 18:53:45 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/14 20:13:29 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char		*ft_strtrim(char const *s)
 	int		i3;
 	int		i4;
 
+	if (!(s))
+		return (NULL);
 	i4 = ft_count_space(s, &i2, &i3);
 	if (!(array = (char*)malloc((i4 + 1) * sizeof(char))))
 		return (NULL);
