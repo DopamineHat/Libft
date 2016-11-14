@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_libft.h                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 23:10:59 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 07:43:51 by adeletan         ###   ########.fr       */
+/*   Created: 2016/11/14 14:57:55 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/14 16:23:28 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ char	*ft_strcpy(char *dst, char const *src);
 char	*ft_strncpy(char *dst, char const *src, size_t len);
 char	*ft_strcat(char *s1, char const *s2);
 char	*ft_strncat(char *s1, char const *s2, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
 
 #endif
