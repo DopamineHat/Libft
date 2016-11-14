@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 14:57:55 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/14 17:11:22 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/14 18:58:19 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 #endif

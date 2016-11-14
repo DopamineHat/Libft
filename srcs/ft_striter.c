@@ -6,7 +6,7 @@
 /*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 07:52:14 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/06 04:33:05 by adeletan         ###   ########.fr       */
+/*   Updated: 2016/11/14 19:25:06 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	ft_striter(char *s, void (*f) (char *))
 {
-	int index;
+	int i;
 
-	index = 0;
-	while (s[index])
-	{
-		f(&s[index]);
-		index++;
-	}
+	i = 0;
+	if (!(s) || !(f))
+		return ;
+	while (s[i])
+		f(&s[i++]);
 }
