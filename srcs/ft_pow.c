@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 02:09:53 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/16 19:59:17 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/17 17:31:02 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/17 17:56:05 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		ft_pow(int i, size_t j)
 {
-	int i;
-
-	i = 0;
-	while (((unsigned char)s1[i] == (unsigned char)s2[i]) &&
-			s1[i] && s2[i++])
-		;
-	return ((unsigned char)s1[i] - (unsigned char)(s2[i]));
+	if (j == 0)
+		return (1);
+	else
+		return (i * ft_pow(i, --j));
 }
