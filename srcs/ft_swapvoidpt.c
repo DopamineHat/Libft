@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_swapvoid.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 17:31:02 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/17 19:51:25 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/17 18:54:07 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/17 19:32:32 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_pow(int i, unsigned int j)
+void	ft_swapvoid(void **a, void **b)
 {
-	if (j == 0)
-		return (1);
-	else
-		return (i * ft_pow(i, --j));
+	void *c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
 }

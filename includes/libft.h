@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 14:57:55 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/17 18:03:55 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/17 19:50:58 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,9 @@ char				*ft_strchr(const char *s, int c);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memalloc(size_t size);
-int					ft_pow(int i, size_t j);
+int					ft_pow(int i, unsigned int j);
 int					ft_sqrt(int x);
+void				ft_swapvoidpt(void **a, void **b);
 
 typedef struct		s_list
 {
