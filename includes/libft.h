@@ -6,7 +6,7 @@
 /*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 14:57:55 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/16 16:39:31 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/17 18:03:55 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void				ft_strdel(char **as);
 char				*ft_strnew(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strdup(char const *s);
-int					ft_strlen(char const *s);
+size_t				ft_strlen(char const *s);
 int					ft_strcmp(char const *s1, char const *s2);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
 int					ft_isascii(int c);
@@ -70,6 +70,8 @@ char				*ft_strchr(const char *s, int c);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memalloc(size_t size);
+int					ft_pow(int i, size_t j);
+int					ft_sqrt(int x);
 
 typedef struct		s_list
 {
@@ -83,7 +85,6 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *nw);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-
-
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
