@@ -21,3 +21,5 @@ re : fclean all
 norme :
 	norminette ./srcs/
 	norminette ./includes/
+
+.PHONY: all clean fclean re

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpagot <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 14:57:55 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/17 19:50:58 by rpagot           ###   ########.fr       */
+/*   Created: 2016/11/18 16:57:01 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/18 17:12:08 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ void				*ft_memalloc(size_t size);
 int					ft_pow(int i, unsigned int j);
 int					ft_sqrt(int x);
 void				ft_swapvoidpt(void **a, void **b);
+int					*ft_sort_tab(int *tab);
+char				*ft_is_space(char *str);
 
 typedef struct		s_list
 {
