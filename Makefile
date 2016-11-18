@@ -1,7 +1,7 @@
-NAME := libft.a
-FLAGS := -Wall -Werror -Wextra
-INCLUDES := -I ./includes/
-SRCS := ./srcs/*.c
+NAME = libft.a
+FLAGS = -Wall -Werror -Wextra
+INCLUDES = -I ./includes/
+SRCS = ./srcs/*.c
 
 all: $(NAME)
 
