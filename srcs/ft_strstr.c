@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adeletan <adeletan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 03:12:07 by adeletan          #+#    #+#             */
-/*   Updated: 2016/11/07 05:22:26 by adeletan         ###   ########.fr       */
+/*   Created: 2016/11/18 21:59:40 by rpagot            #+#    #+#             */
+/*   Updated: 2016/11/18 22:24:53 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strstr(char const *big, char const *little)
 {
-	int		index;
-	int		index2;
+	int		i;
+	int		i2;
 
-	index = 0;
-	index2 = -1;
-	if (!(little[index]))
+	i = 0;
+	i2 = -1;
+	if (!(little[i]))
 		return ((char*)big);
-	while (big[index])
+	while (big[i])
 	{
-		if (big[index] == little[0])
-			if (!(ft_strcmp(ft_strsub(big, index, ft_strlen(little)),
-						little)) && index2 == -1)
-				index2 = index;
-		++index;
+		if (big[i] == little[0])
+			if (!(ft_strcmp(ft_strsub(big, i, ft_strlen(little)),
+						little)) && i2 == -1)
+				i2 = i;
+		++i;
 	}
-	if (index2 == -1)
+	if (i2 == -1)
 		return (NULL);
-	return ((char*)(&big[index2]));
+	return ((char*)(&big[i2]));
 }

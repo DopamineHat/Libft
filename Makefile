@@ -1,17 +1,19 @@
 NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
-INCLUDES = -I ./includes/
-SRCS = ./srcs/*.c
+INCLUDES = -I ./includes
+SRC = ./srcs/*.c
 
-all: $(NAME)
+OBJ = *.o
 
 $(NAME) :
-	gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
-	ar rc $(NAME) *.o
-	ranlib $(NAME);
+	gcc $(FLAGS) -c $(SRC) $(INCLUDES)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+all : $(NAME)
 
 clean :
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean : clean
 	rm -f $(NAME)
@@ -19,7 +21,8 @@ fclean : clean
 re : fclean all
 
 norme :
-	norminette ./srcs/
-	norminette ./includes/
+	./norminette
+	./norminette include
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean re all
+	rm -f $(OBJ)
