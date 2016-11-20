@@ -6,7 +6,7 @@
 /*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 16:57:01 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/18 17:12:08 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/20 03:59:47 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int					ft_sqrt(int x);
 void				ft_swapvoidpt(void **a, void **b);
 int					*ft_sort_tab(int *tab);
 char				*ft_is_space(char *str);
+void				ft_swap_universal(void *a, void *b, size_t n);
 
 typedef struct		s_list
 {
