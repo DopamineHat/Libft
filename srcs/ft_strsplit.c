@@ -6,7 +6,7 @@
 /*   By: rpagot <rpagot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 21:52:48 by rpagot            #+#    #+#             */
-/*   Updated: 2016/11/18 21:52:57 by rpagot           ###   ########.fr       */
+/*   Updated: 2016/11/20 11:48:54 by rpagot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static int		ft_cnt_parts(const char *s, char c)
 		if (in_substring == 0 && *s != c)
 		{
 			in_substring = 1;
-			cnt++;
+			++cnt;
 		}
-		s++;
+		++s;
 	}
 	return (cnt);
 }
@@ -40,8 +40,8 @@ static int		ft_wlen(const char *s, char c)
 	len = 0;
 	while (*s != c && *s != '\0')
 	{
-		len++;
-		s++;
+		++len;
+		++s;
 	}
 	return (len);
 }
@@ -62,12 +62,12 @@ char			**ft_strsplit(char const *s, char c)
 	while (nb_word--)
 	{
 		while (*s == c && *s != '\0')
-			s++;
+			++s;
 		t[i] = ft_strsub((const char *)s, 0, ft_wlen((const char *)s, c));
 		if (t[i] == NULL)
 			return (NULL);
 		s = s + ft_wlen(s, c);
-		i++;
+		++i;
 	}
 	t[i] = NULL;
 	return (t);
