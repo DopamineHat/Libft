@@ -93,7 +93,8 @@ SRC_NAME = 	ft_atoi.c \
 			ft_vmult.c \
 			get_next_line.c \
 			ft_ddot.c \
-			ft_strjoin_multi.c
+			ft_strjoin_multi.c \
+			ft_error.c
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJ_PATH = ./obj/
 OBJ_NAME = $(SRC_NAME:.c=.o)
