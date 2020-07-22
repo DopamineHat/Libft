@@ -142,6 +142,7 @@ t_attr			*ft_fill_attr(char *path, char *filename);
 void			ft_list_sort(t_attr ***list, int (*compare)(t_attr*, t_attr*));
 void			ft_ptrswap(void **data_1, void **data_2);
 void			*ft_realloc(void *ptr, size_t size);
+void			ft_error(char *str);
 
 t_vect			vectsub(t_vect vect1, t_vect vect2);
 t_vect			vectadd(t_vect vect1, t_vect vect2);
